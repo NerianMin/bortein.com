@@ -1,0 +1,34 @@
+{
+  "name": "bortein.com",
+  "version": "1.0.0",
+  "description": "CV",
+  "homepage": "https://bortein.com",
+  "main": "index.js",
+  "scripts": {
+    "run-all": "npm-run-all",
+    "build": "npm run scss --style=compressed && npm run save-pdf",
+    "serve": "npx http-server ./ -p 3000",
+    "save-pdf": "npm run run-all -- -p -r serve pdf-gen",
+    "pdf-gen": "node pdf-gen/index.js",
+    "dev": "npm run scss -- -w",
+    "scss": "sass scss/main.scss css/main.css",
+    "deploy": "npm run build && git add --all && git commit -m 'build' && git push origin master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NerianMin/bortein.com.git"
+  },
+  "author": "Nerian Bortein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NerianMin/bortein.com/issues"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "puppeteer": "^23.9.0",
+    "sass": "^1.81.1"
+  },
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

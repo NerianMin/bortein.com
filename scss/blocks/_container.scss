@@ -1,0 +1,41 @@
+@use '../scss-variables';
+@use '../mixins';
+
+.container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-row-gap: 34px;
+  grid-template-areas:
+    "title"
+    "general-info"
+    "experience-info";
+  padding: 45px 68px;
+  margin: 0;
+  box-sizing: border-box;
+  max-width: scss-variables.$container-max-width;
+  border-radius: 0;
+  background: var(--primary-background-color);
+  @include mixins.light-drop-shadow();
+}
+
+@include mixins.going-large(scss-variables.$breakpoint-small) {
+  .container {
+    grid-template-columns: minmax(200px, 35%) minmax(300px, 75%);
+    grid-template-areas:
+      "title title"
+      "general-info experience-info";
+  }
+}
+
+@include mixins.going-large(scss-variables.$breakpoint-medium) {
+  .container {
+    border-radius: 6px;
+    margin: 50px auto 80px;
+  }
+}
+
+@include mixins.print() {
+  .container {
+    box-shadow: unset;
+  }
+}

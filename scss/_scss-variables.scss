@@ -1,0 +1,17 @@
+// Sizes
+$breakpoint-x-small: 450px;
+$breakpoint-small: 750px;
+$breakpoint-medium: 960px;
+$container-max-width: $breakpoint-medium;
+$spacing: 38px;
+
+$border: 2px solid var(--border-color);
+
+// Colors
+$primary-drop-shadow-color: rgb(186,200,227);
+
+// Font
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 600;
+$letter-spacing: .2rem;

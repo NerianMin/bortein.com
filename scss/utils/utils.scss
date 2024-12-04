@@ -1,0 +1,37 @@
+@use "../css-variables";
+@use "../scss-variables";
+@use "../mixins";
+
+@include mixins.print() {
+  .break-page {
+    break-before: page;
+  }
+}
+
+.dot-spacing {
+  &::after {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 3px;
+    color: var(--spacer-color);
+    background: currentColor;
+    border-radius: 3px;
+    box-shadow: 20px 0 0 currentColor, -20px 0 0 currentColor;
+    margin: 30px auto 20px;
+  }
+}
+
+@include mixins.going-large(scss-variables.$breakpoint-x-small) {
+  .dot-spacing {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@include mixins.print() {
+  .hide-on-print {
+    display: none !important;
+  }
+}

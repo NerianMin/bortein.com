@@ -1,0 +1,38 @@
+@use "mixins";
+html {
+    font-size: var(--base-font-size);
+}
+
+body {
+  background: var(--secondary-background-color);
+  font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
+  font-size: .875rem;
+  color: var(--primary-text-color);
+}
+
+@include mixins.print() {
+  @page {
+    margin: 1.2cm .5cm 1.6cm;
+    size: A4;
+  }
+
+  html {
+    font-size: 12pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  html,
+  body {
+    width: 270mm;
+    height: 297mm;
+  }
+
+  body {
+    background: var(--primary-background-color);
+  }
+
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+  }
+}
