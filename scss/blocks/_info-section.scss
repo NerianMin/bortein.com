@@ -5,7 +5,11 @@
   margin-bottom: scss-variables.$spacing;
 
   &:last-child {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
+  }
+
+  &__group {
+    margin-bottom: 2rem
   }
 
   & + & {
@@ -55,12 +59,12 @@
   &__text {
     margin-top: 0;
     margin-bottom: 1.5rem;
-    color: var(--light-text-color);
+    color: var(--primary-text-color);
     font-size: .875rem;
     line-height: 1rem;
 
     &--long {
-      color: var(--x-light-text-color);
+      color: var(--x-primary-text-color);
       line-height: 1.5rem;
     }
 

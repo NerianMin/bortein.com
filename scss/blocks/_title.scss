@@ -14,7 +14,6 @@
     font-size: 3.25rem;
     line-height: 3.5rem;
     font-weight: scss-variables.$font-weight-bold;
-    text-transform: uppercase;
     letter-spacing: scss-variables.$letter-spacing;
   }
 
@@ -29,10 +28,9 @@
   &__image {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
+    //border-radius: 0%;
     object-fit: cover;
     object-position: 45%;
-    filter: grayscale(.25) contrast(130%) saturate(120%);
   }
 }
 
