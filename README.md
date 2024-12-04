@@ -1,1 +1,1 @@
-It is just a CV: https://www.bortein.com/
+It is just my online resume: https://www.bortein.com/
