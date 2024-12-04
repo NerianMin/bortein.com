@@ -1,8 +1,8 @@
 {
   "name": "bortein.com",
   "version": "1.0.0",
-  "description": "CV",
-  "homepage": "https://bortein.com",
+  "description": "Personal online resume",
+  "homepage": "https://www.bortein.com",
   "main": "index.js",
   "scripts": {
     "run-all": "npm-run-all",
@@ -24,6 +24,7 @@
     "url": "https://github.com/NerianMin/bortein.com/issues"
   },
   "devDependencies": {
+    "eslint": "^9.16.0",
     "http-server": "^14.1.1",
     "puppeteer": "^23.9.0",
     "sass": "^1.81.1"
