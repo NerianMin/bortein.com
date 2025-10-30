@@ -396,7 +396,7 @@ body {
   grid-template-columns: auto;
   grid-row-gap: 34px;
   grid-template-areas: "title" "general-info" "experience-info";
-  padding: 45px 68px;
+  padding: 48px 64px;
   margin: 0;
   box-sizing: border-box;
   max-width: 960px;
