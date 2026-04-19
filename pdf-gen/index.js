@@ -4,7 +4,8 @@ const path = require('path');
 const puppeteer = require('puppeteer');
 
 async function generatePDF() {
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({
+  executablePath: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"});
   const page = await browser.newPage();
   await page.goto(`http://localhost:${PORT}`, {
     waitUntil: ["load","networkidle0"]
